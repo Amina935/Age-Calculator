@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Age Analyzer</title>
+    <meta name="description" content="Calculate your precise age and discover your exotic sign traits.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <div class="container">
+        <header class="header">
+            <h1>Cosmic Age Analyzer</h1>
+            <p>Discover your exact age in time and your celestial traits.</p>
+        </header>
+
+        <main class="card glass-effect">
+            <div class="input-section">
+                <div class="date-inputs">
+                    <div class="input-group date-picker-group">
+                        <label for="birthdate">Date of Birth</label>
+                        <input type="date" id="birthdate">
+                    </div>
+                </div>
+                <button id="analyze-btn" class="glow-on-hover">Analyze My Existence</button>
+                <p id="error-message" class="error hidden">Please enter a valid date of birth.</p>
+            </div>
+
+            <div id="results" class="results-section hidden">
+                <div class="result-grid">
+                    <div class="result-box age-box">
+                        <h3>Chronological Age</h3>
+                        <div class="time-stats">
+                            <div class="stat">
+                                <span id="res-years" class="number">0</span>
+                                <span class="label">Years</span>
+                            </div>
+                            <div class="stat">
+                                <span id="res-months" class="number">0</span>
+                                <span class="label">Months</span>
+                            </div>
+                            <div class="stat">
+                                <span id="res-days" class="number">0</span>
+                                <span class="label">Days</span>
+                            </div>
+                            <div class="stat">
+                                <span id="res-minutes" class="number">0</span>
+                                <span class="label">Total Minutes on Earth</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="result-box zodiac-box">
+                        <h3>Celestial Profile</h3>
+                        <div class="zodiac-info">
+                            <div class="zodiac-header">
+                                <span id="zodiac-icon" class="zodiac-icon">✨</span>
+                                <h4 id="res-sign" class="sign-name">Zodiac Sign</h4>
+                            </div>
+                            <div class="trait-group">
+                                <h5>Quality Sign:</h5>
+                                <p id="res-quality">Quality</p>
+                            </div>
+                            <div class="trait-group">
+                                <h5>Strengths & Qualities:</h5>
+                                <p id="res-qualities">Qualities list</p>
+                            </div>
+                            <div class="trait-group">
+                                <h5>Weaknesses (Inferiorities):</h5>
+                                <p id="res-inferiorities">Inferiorities list</p>
+                            </div>
+                            <div class="trait-group">
+                                <h5>Priorities:</h5>
+                                <p id="res-priorities">Priorities list</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button id="reset-btn" class="secondary-btn">Calculate Another</button>
+            </div>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
